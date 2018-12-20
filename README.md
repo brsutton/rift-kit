@@ -97,7 +97,7 @@ From there, you'll probably want to change a few things:
     sourceSets {
         main {
             java.srcDirs = ['src']
-	    resources.srcDirs = ['resources']
+            resources.srcDirs = ['resources']
         }
     }
     ```
