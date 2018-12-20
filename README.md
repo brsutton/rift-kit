@@ -96,12 +96,8 @@ From there, you'll probably want to change a few things:
     ```gradle
     sourceSets {
         main {
-            java {
-                srcDir 'src'
-            }
-            resources {
-                srcDir 'resources'
-            }
+            java.srcDirs = ['src']
+	    resources.srcDirs = ['resources']
         }
     }
     ```
