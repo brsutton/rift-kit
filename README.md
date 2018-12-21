@@ -46,7 +46,6 @@ From there, you'll probably want to change a few things:
     version '1.0'
     archivesBaseName = 'Example'
     ```
-    > Generally speaking, `group` should match Java package containing all project code, which by convention should start with owner's domain name, e.g. `org.dimdev.halflogs`.  
 
 - `src/main/resources/riftmod.json`
     ```json
