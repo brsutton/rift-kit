@@ -17,12 +17,6 @@ This is a minimal Rift project. The only use of it is to be copied to start a ne
     ./gradlew build
     ```
 
-- Running Server under Eclipse:<br>
-    Open *Launch Configurations*, select *yourmod*\_client, switch to *Arguments* tab, change program arguments from `...Client...` to `...Server...`:
-    ```
-    --tweakClass org.dimdev.riftloader.launch.RiftLoaderServerTweaker
-    ```
-
 ## Getting started
 
 Important files in MDK:
@@ -90,7 +84,7 @@ From there, you'll probably want to change a few things:
     ```
     This description is shown at *Select Resource Packs* screen. If mod doesn't have any resources, you can safely delete this file.
 
-## Snippets
+## Tips
 
 - Changing `src/main/java` to `src` and `src/main/resources` to `resources`:
     ```gradle
@@ -102,28 +96,8 @@ From there, you'll probably want to change a few things:
     }
     ```
 
-- Simple blocks and items:  
-    ```java
-    class SimpleThings implements BlockAdder, ItemAdder {
-        public static final Block MYTHRIL_ORE;
-        public static final Item MYTHRIL;
-    
-        static {
-            Block.Properties mythrilOre = Block.Properties.create(Material.ROCK).hardnessAndResistance(5F, 15F);
-            MYTHRIL_ORE = new Block(mythrilOre);
-        
-            MYTHRIL = new Item(new Item.Properties().maxStackSize(16)).group(ItemGroup.SEARCH);
-        }
-    
-        @Override
-	    public void registerBlocks() {
-	    	Block.register(new ResourceLocation("example:mythril_ore"), MYTHRIL_ORE);
-        }
-    
-        @Override
-	    public void registerItems() {
-		    Item.register(MYTHRIL_ORE, ItemGroup.SEARCH);
-		    Item.register(new ResourceLocation("example:mythril"), MYTHRIL);
-        }
-    }
+- Running Server under Eclipse:<br>
+    Open *Launch Configurations*, select *yourmod*\_client, switch to *Arguments* tab, change program arguments from `...Client...` to `...Server...`:
+    ```
+    --tweakClass org.dimdev.riftloader.launch.RiftLoaderServerTweaker
     ```
